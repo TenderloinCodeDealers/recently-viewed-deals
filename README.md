@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Module responsible for showing the recently reviewed deals at the bottom of the product page. 
 
 ## Related Projects
 
