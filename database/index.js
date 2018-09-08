@@ -39,7 +39,6 @@ let servSchema = new mongoose.Schema({
 let Prod = mongoose.model('Prod', prodSchema);
 let Serv = mongoose.model('Serv', servSchema);
 
-
 let saver = () => {
 
   for (var i = 0; i < 50; i++) {
@@ -97,8 +96,20 @@ let saver = () => {
    }
 }
 
-saver(); 
+let getProduct = function(productId, callback) {
+  // console.log('OWNER', username)
+  // console.log('got to controller') --> successful 
+  Prod.find({id: productId}, function (err, results) {
+    if (err){
+      callback(err)
+      console.log('error on MongoDB get query')
+    } else { 
+      callback(null, results)
+      console.log('MongoDB get query successful')
+      // this is successful 
+    }
+  });
+}
 
-
-
+module.exports.getProduct = getProduct; 
 
