@@ -8,13 +8,17 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start-webpack": "webpack -d --watch", 
+    "start": "nodemon server/index.js",
+    "start-webpack": "webpack -d --watch",
     "seed-mongo": "node database/index.js"
   },
   "dependencies": {
     "babel": "^6.23.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "faker": "^4.1.0",
-    "mongoose": "^5.2.13"
+    "mongoose": "^5.2.13",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
