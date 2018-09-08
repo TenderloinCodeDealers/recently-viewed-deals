@@ -8,7 +8,8 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start-webpack": "webpack -d --watch"
+    "start-webpack": "webpack -d --watch", 
+    "seed-mongo": "node database/index.js"
   },
   "dependencies": {
     "babel": "^6.23.0",
