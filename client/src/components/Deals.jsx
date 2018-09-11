@@ -5,21 +5,18 @@ class Deals extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: 0,
-      imageUrl: '',
-      productDealTagline: '',
-      location: '',
-      dealNumberBought: 0,
-      price: 0,
-      starRating: 0
+      // id: 0,
+      // imageUrl: '',
+      // productDealTagline: '',
+      // location: '',
+      // dealNumberBought: 0,
+      // price: 0,
+      // starRating: 0
     };
     this.get = this.get.bind(this);
     this.get(props.deal.id);
+    // potentially add this to componentDidMount
   }
-
-  // we will want to immediately inovke this.
-  // add in the logic --> if service, send service GET request / if product, send product GET request.
-  // how do we differentiate if it is a product or a service?
 
   // componentDidMount() {
   //   get(props.deal.id);
@@ -27,13 +24,13 @@ class Deals extends React.Component {
 
   get(id) {
     // console.log('THIS', this);
-    // if a product ...
+    // if a product ... (products have id's 0 to 49)
     if (id < 50) {
       axios
         .get(`${id}/api/recently-viewed-product-data`)
         .then(response => {
           // console.log('THIS ASYNC', this);
-          console.log(response.data[0].id);
+          // console.log(response.data[0].id);
           this.setState({
             id: response.data[0].id,
             imageUrl: response.data[0].imageUrl,
@@ -43,27 +40,41 @@ class Deals extends React.Component {
             price: response.data[0].price,
             starRating: response.data[0].starRating
           });
-          console.log('newState', this.state);
+          // console.log('newState', this.state);
         })
-        .catch(function(error) {
+        .catch(error => {
           console.log(error);
         });
-      // } else {
-      // if it is a service ...
-      //   axios.get(`${this.props.id}/api/recently-viewed-service-data`).then(function(response) {
-      //     this.setState = {
-      //       (include the service properties ... )
-      //     };
-      //   });
+    } else {
+      // if it is a service ... (services have id's 50 to 99)
+      axios
+        .get(`${id}/api/recently-viewed-service-data`)
+        .then(response => {
+          this.setState({
+            id: response.data[0].id,
+            imageUrl: response.data[0].imageUrl,
+            serviceDealTagline: response.data[0].serviceDealTagline,
+            location: response.data[0].locationTitle,
+            dealNumberBought: response.data[0].dealNumberBought,
+            price: response.data[0].price,
+            starRating: response.data[0].starRating
+          });
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   }
 
-  // need to add in the logic, if rating exists ... add it, if location exists, add it ... if numBought exists, add it.
+  // need to add in the logic, if state.ratings does not exist, don't render it ...
+
   render() {
     return (
       <span className="deal">
         <img className="image" src={this.state.imageUrl} />
-        <div className="tagline"> {this.state.productDealTagline}</div>
+        <div className="tagline">
+          {this.state.productDealTagline || this.state.serviceDealTagline}
+        </div>
         <div className="location"> {this.state.location} </div>
         <div className="numBought"> {`${this.state.dealNumberBought} + bought`} </div>
         <div className="stars"> {`${this.state.starRating} stars`} </div>

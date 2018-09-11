@@ -61,7 +61,7 @@ let saver = () => {
 
     var prodDoc = new Prod(productData);
 
-    prodDoc.save(function(error) {
+    prodDoc.save(error => {
       if (error) {
         console.log(error);
       } else {
@@ -102,7 +102,7 @@ let saver = () => {
 
     var servDoc = new Serv(serviceData);
 
-    servDoc.save(function(error) {
+    servDoc.save(error => {
       if (error) {
         console.log(error);
       } else {
@@ -114,17 +114,30 @@ let saver = () => {
 
 // saver();
 
-let getProdInfo = function(id, callback) {
+let getProdInfo = (id, callback) => {
   // console.log('got to controller')
-  Prod.find({ id: id }, function(err, results) {
+  Prod.find({ id: id }, (err, results) => {
     if (err) {
       callback(err);
-      console.log('error on MongoDB query');
+      console.log('error on MongoDB product query');
     } else {
       callback(null, results);
-      console.log('MongoDB query successful');
+      console.log('MongoDB product query successful');
+    }
+  });
+};
+
+let getServInfo = (id, callback) => {
+  Serv.find({ id: id }, (err, results) => {
+    if (err) {
+      callback(err);
+      console.log('error on MongoDB service query');
+    } else {
+      callback(null, results);
+      console.log('MongoDB service query successful');
     }
   });
 };
 
 module.exports.getProdInfo = getProdInfo;
+module.exports.getServInfo = getServInfo;

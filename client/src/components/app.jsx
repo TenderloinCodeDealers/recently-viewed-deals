@@ -6,9 +6,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      deals: [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }]
-      // Each deal should be an object { id: 4 }
-      // Should each of those objects contain? Perhaps just the ID so it can be included in the GET request?
+      deals: [
+        { id: 0 },
+        { id: 1 },
+        { id: 2 },
+        { id: 3 },
+        { id: 50 },
+        { id: 51 },
+        { id: 52 },
+        { id: 53 },
+        { id: 54 }
+      ]
     };
   }
 
