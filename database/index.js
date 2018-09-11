@@ -1,119 +1,30 @@
-var faker = require('faker');
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/groupon-deals-db');
+// I think there may have been some issues having two database files ...
+// included all of below in the index.js file
 
-var db = mongoose.connection;
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/groupon-deals-db');
 
-db.on('error', console.error.bind(console, 'connection error:'));
+// var db = mongoose.connection;
 
-let prodSchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    unique: true
-  },
-  imageUrl: String,
-  productDealTagline: String,
-  dealNumberBought: Number,
-  price: Number,
-  starRating: Number
-});
+// // need to confirm there will not be any sort of conflict issues by having two database files both creating mongoose connections
+// // don't believe there are any ...
 
-let servSchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    unique: true
-  },
-  imageUrl: String,
-  companyName: String,
-  serviceCategory: String,
-  phoneNumber: Number,
-  dollarSignMetric: String,
-  hoursOfOperation: String,
-  parking: String,
-  wifi: String,
-  goodForKids: String,
-  goodForGroups: String,
-  takesReservations: String,
-  alcohol: String,
-  locationTitle: String,
-  serviceDealTagline: String,
-  price: Number,
-  dealNumberBought: Number,
-  starRating: Number
-});
+// db.on('error', console.error.bind(console, 'connection error:'));
 
-let Prod = mongoose.model('Prod', prodSchema);
-let Serv = mongoose.model('Serv', servSchema);
+// let getProdInfo = function(id, callback) {
+//   // console.log('got to controller')
+//   // db.Prod.find({ id: id }, function(err, results) {
+//   db.Prods.find()
+//     .byId(id)
+//     .exec(function(err, results) {
+//       if (err) {
+//         callback(err);
+//         console.log('error on MongoDB query');
+//       } else {
+//         callback(null, results);
+//         console.log('MongoDB query successful');
+//       }
+//     });
+// };
 
-
-let saver = () => {
-
-  for (var i = 0; i < 50; i++) {
-    var productData = {};
-    productData.id = i;
-    productData.imageUrl = `https://s3-us-west-1.amazonaws.com/groupon-stock-images/image-${i}.jpg`;
-    productData.productDealTagline = faker.company.catchPhrase();
-    productData.locationTitle = faker.address.city();
-    productData.dealNumberBought = faker.random.number();
-    productData.price = faker.commerce.price();
-    productData.starRating = faker.random.number({
-      'min': 0,
-      'max': 5
-    });
-
-    var prodDoc = new Prod(productData);
-
-    prodDoc.save(function (error) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('product saved to repo');
-      }
-    });
-
-  }
-
-  for (var j = 50; j < 100; j++) {
-    var serviceData = {};
-    serviceData.id = j;
-    serviceData.imageUrl = `https://s3-us-west-1.amazonaws.com/groupon-stock-images/image-${j}.jpg`;
-    serviceData.companyName = faker.company.companyName();
-    serviceData.serviceCategory = faker.commerce.department();
-    serviceData.phoneNumber = faker.random.number({
-      'min': 10,
-      'max': 10
-    });
-    serviceData.dollarSignMetric = faker.random.number({
-      'min': 0,
-      'max': 5
-    });
-    serviceData.hoursOfOperation = '9-5';
-    serviceData.parking = faker.random.boolean();
-    serviceData.wifi = faker.random.boolean();
-    serviceData.goodForKids = faker.random.boolean();
-    serviceData.goodForGroups = faker.random.boolean();
-    serviceData.takesReservations = faker.random.boolean();
-    serviceData.alcohol = faker.random.boolean();
-    serviceData.locationTitle = faker.address.city();
-    serviceData.serviceDealTagline = faker.company.catchPhrase();
-    serviceData.price = faker.commerce.price();
-    serviceData.dealNumberBought = faker.random.number();
-    serviceData.starRating = faker.random.number({
-      'min': 0,
-      'max': 5
-    });
-
-    var servDoc = new Serv(serviceData);
-
-    servDoc.save(function (error) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('service saved to repo');
-      }
-    });
-
-  }
-};
-
-saver();
+// module.exports.getProdInfo = getProdInfo;
