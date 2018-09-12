@@ -10,9 +10,8 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "start-webpack": "webpack -d --watch",
-
-    "seed-mongo": "node database/seed.js"
-
+    "seed-mongo": "node database/seed.js",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -23,7 +22,6 @@
     "npx": "^10.2.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
-
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -38,7 +36,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
     "prettier": "^1.14.2",
+    "puppeteer": "^1.8.0",
     "webpack": "^2.2.1"
   }
 }
