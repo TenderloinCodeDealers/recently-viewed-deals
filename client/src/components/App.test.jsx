@@ -7,8 +7,18 @@ import App from './App';
 
 configure({ adapter: new Adapter() });
 
-it('renders without crashing', () => {
-  shallow(<App />);
-});
+describe('App Component', () => {
+  const app = shallow(<App />);
 
-//This test mounts a component and makes sure that it didn’t throw during rendering.
+  it('renders without crashing', () => {
+    app;
+  });
+  //This test mounts a component and makes sure that it didn’t throw during rendering.
+
+  it('displays the module name', () => {
+    const wrapper = shallow(<div className="title" />);
+    expect(wrapper.exists('.title')).toEqual(true);
+    expect(wrapper.find('div.title').exists());
+    // either of the above work
+  });
+});

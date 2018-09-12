@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <b>Recently Viewed Deals</b>
+        <div className="title">Recently Viewed Deals</div>
         <br />
         <div>
           <span className="dealContainer">
