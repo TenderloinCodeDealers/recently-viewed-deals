@@ -1,4 +1,3 @@
-
 var express = require('express');
 var app = express();
 const controllers = require('../database/seed.js');
