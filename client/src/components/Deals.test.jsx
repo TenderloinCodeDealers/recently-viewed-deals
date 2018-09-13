@@ -8,13 +8,13 @@ import Adapter from 'enzyme-adapter-react-16';
 import Deals from './Deals';
 
 let deal = {
-  id: 0,
-  imageUrl: '',
-  productDealTagline: '',
-  location: '',
-  dealNumberBought: 0,
-  price: 0,
-  starRating: 0
+  id: 1,
+  imageUrl: 'https://s3-us-west-1.amazonaws.com/groupon-stock-images/image-1.jpg',
+  productDealTagline: 'Automated coherent data-warehouse',
+  location: 'San Francisco',
+  dealNumberBought: 60297,
+  price: 977,
+  starRating: 3
 };
 
 configure({ adapter: new Adapter() });
@@ -24,6 +24,14 @@ describe('Deals Component', () => {
 
   it('renders without crashing', () => {
     deals;
+  });
+
+  it('renders a image', () => {
+    expect(deals.find('.image').length).toEqual(1);
+  });
+
+  it('renders a product or service tagline', () => {
+    expect(deals.find('.tagline').length).toEqual(1);
   });
 
   it('correctly displays the price div', () => {

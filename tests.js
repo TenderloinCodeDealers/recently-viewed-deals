@@ -19,4 +19,14 @@ afterAll(() => {
   browser.close();
 });
 
-describe('search function', () => {});
+describe('search function', () => {
+  beforeEach(async () => {
+    await page.goto(pageUrl, { waitUntil: 'networkidle2' });
+  });
+
+  test('initial title is correct', async () => {
+    var div = '.title';
+    const title = await page.$eval(div, e => e.textContent);
+    expect(title).toEqual('Recently Viewed Deals');
+  });
+});

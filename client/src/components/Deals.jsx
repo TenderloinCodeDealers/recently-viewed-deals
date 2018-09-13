@@ -66,8 +66,6 @@ class Deals extends React.Component {
     }
   }
 
-  // need to add in the logic, if state.ratings does not exist, don't render it ...
-
   render() {
     return (
       <span className="deal">
@@ -85,12 +83,3 @@ class Deals extends React.Component {
 }
 
 export default Deals;
-
-// original hardcoded state for component
-//  id: 1,
-//  imageUrl: 'https://s3-us-west-1.amazonaws.com/groupon-stock-images/image-1.jpg',
-//  productDealTagline: 'Automated coherent data-warehouse',
-//  location: 'San Francisco',
-//  dealNumberBought: 60297,
-//  price: 977,
-//  starRating: 3,
