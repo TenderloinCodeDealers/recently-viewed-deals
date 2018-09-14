@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 class Deals extends React.Component {
   constructor(props) {
@@ -11,12 +12,29 @@ class Deals extends React.Component {
       productDealTagline: '',
       location: '',
       dealNumberBought: 0,
+      origPrice: 0,
       price: 0,
-      starRating: 6
+      starRating: 6,
+      numOfReviews: 0
     };
     this.get = this.get.bind(this);
-    this.setWidth = this.setWidth.bind(this);
     this.get(props.deal.id);
+  }
+
+  stars(rating) {
+    const starArray = [];
+    let color = '';
+    for (var i = 1; i <= 5; i++) {
+      if (i < rating) {
+        color = '#FDC038';
+      } else {
+        color = '#A5A8AB';
+      }
+      starArray[i] = (
+        <FontAwesomeIcon className="star" key={`star-${i}`} icon={faStar} color={color} />
+      );
+    }
+    return starArray;
   }
 
   get(id) {
@@ -34,8 +52,10 @@ class Deals extends React.Component {
             productDealTagline: response.data[0].productDealTagline,
             location: response.data[0].location,
             dealNumberBought: response.data[0].dealNumberBought,
+            origPrice: response.data[0].origPrice,
             price: response.data[0].price,
-            starRating: response.data[0].starRating
+            starRating: response.data[0].starRating,
+            numOfReviews: response.data[0].numOfReviews
           });
           // console.log('newState', this.state);
         })
@@ -53,8 +73,10 @@ class Deals extends React.Component {
             serviceDealTagline: response.data[0].serviceDealTagline,
             location: response.data[0].locationTitle,
             dealNumberBought: response.data[0].dealNumberBought,
+            origPrice: response.data[0].origPrice,
             price: response.data[0].price,
-            starRating: response.data[0].starRating
+            starRating: response.data[0].starRating,
+            numOfReviews: response.data[0].numOfReviews
           });
         })
         .catch(error => {
@@ -63,29 +85,7 @@ class Deals extends React.Component {
     }
   }
 
-  setWidth(rating) {
-    if (rating !== (6 || undefined || null)) {
-      var starPercentage = (rating / 5) * 100;
-      var starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-      console.log('querySelector before', document.getElementByClassName('.stars-inner'));
-      document.getElementByClassName(
-        '.numStars .stars-outer .stars-inner'
-      ).style.width = starPercentageRounded;
-      console.log('starRating', this.state.starRating);
-      console.log('starPercentRounded', starPercentageRounded);
-      console.log('querySelector after', document.getElementsByClassName('.stars-inner'));
-    }
-  }
-
   render() {
-    // const starPercentage = (this.state.starRating / 5) * 100;
-    // const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-    // const elem = document.getElementsByClassName('.numStars .stars-inner');
-    // console.log(document.getElementsByClassName('.stars-inner').width);
-    // document.getElementsByClassName('.stars-inner').width = starPercentageRounded;
-    // console.log(document.getElementsByClassName('.stars-inner').width);
-    // document.querySelector('.stars-inner').style.width = starPercentageRounded;
-
     return (
       <span className="deal">
         <img className="image" src={this.state.imageUrl} />
@@ -94,17 +94,20 @@ class Deals extends React.Component {
         </div>
         <div className="location"> {this.state.location} </div>
         <div className="numBought">
-          {`${this.state.dealNumberBought.toLocaleString()}` + '+ bought'}
+          {`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}
         </div>
-        <div> {this.setWidth(this.state.starRating)} </div>
-        <div className="numStars">
-          <div className="stars-outer">
-            <div className="stars-inner" />
+        <div className="starsContainer">
+          <div>
+            {this.stars(this.state.starRating)}
+            <span className="total-ratings-count">{`( ${this.state.numOfReviews} )`}</span>
           </div>
         </div>
-
-        {/* perhaps need to include a forEach / Map to render all of the stars */}
-        <div className="price"> {`$ ${this.state.price}`} </div>
+        <div>
+          <div className="priceContainer">
+            <span className="origPrice"> {`$${this.state.origPrice}.99 `} </span>
+            <span className="price"> {`$${this.state.price}.99 `} </span>
+          </div>
+        </div>
       </span>
     );
   }
@@ -133,3 +136,25 @@ export default Deals;
 )}
 </div> */
 }
+
+// const starPercentage = (this.state.starRating / 5) * 100;
+// const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+// const elem = document.getElementsByClassName('.numStars .stars-inner');
+// console.log(document.getElementsByClassName('.stars-inner').width);
+// document.getElementsByClassName('.stars-inner').width = starPercentageRounded;
+// console.log(document.getElementsByClassName('.stars-inner').width);
+// document.querySelector('.stars-inner').style.width = starPercentageRounded;
+
+// setWidth(rating) {
+//   if (rating !== (6 || undefined || null)) {
+//     var starPercentage = (rating / 5) * 100;
+//     var starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+//     console.log('querySelector before', document.getElementByClassName('.stars-inner'));
+//     document.getElementByClassName(
+//       '.numStars .stars-outer .stars-inner'
+//     ).style.width = starPercentageRounded;
+//     console.log('starRating', this.state.starRating);
+//     console.log('starPercentRounded', starPercentageRounded);
+//     console.log('querySelector after', document.getElementsByClassName('.stars-inner'));
+//   }
+// }
