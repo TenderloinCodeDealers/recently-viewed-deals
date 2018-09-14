@@ -25,6 +25,7 @@ app.get('/:id/api/recently-viewed-service-data', (req, res) => {
     } else {
       console.log('successful service return from controllers');
       console.log(results);
+
       res.send(results);
     }
   });
