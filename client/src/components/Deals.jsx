@@ -88,7 +88,13 @@ class Deals extends React.Component {
   render() {
     return (
       <span className="deal">
-        <img className="image" src={this.state.imageUrl} />
+        <div className="imageContainer">
+          <div className="item">
+            {/* <img src={this.state.imageUrl} /> */}
+            <img src={this.state.imageUrl} />
+          </div>
+        </div>
+
         <div className="tagline">
           {this.state.productDealTagline || this.state.serviceDealTagline}
         </div>
@@ -114,47 +120,3 @@ class Deals extends React.Component {
 }
 
 export default Deals;
-
-{
-  /* <div>
-{this.state.starRating === (6 || null || undefined) ? (
-  <div />
-) : (
-  <div className="numStars">
-    {
-      // (document.querySelector(
-      //   '.numStars .stars-inner'
-      // ).style.width = starPercentageRounded)
-      (document.querySelector(
-        '.numStars .stars-inner'
-      ).style.width = starPercentageRounded)
-    }
-    <div className="stars-outer">
-      <div className="stars-inner" />
-    </div>
-  </div>
-)}
-</div> */
-}
-
-// const starPercentage = (this.state.starRating / 5) * 100;
-// const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-// const elem = document.getElementsByClassName('.numStars .stars-inner');
-// console.log(document.getElementsByClassName('.stars-inner').width);
-// document.getElementsByClassName('.stars-inner').width = starPercentageRounded;
-// console.log(document.getElementsByClassName('.stars-inner').width);
-// document.querySelector('.stars-inner').style.width = starPercentageRounded;
-
-// setWidth(rating) {
-//   if (rating !== (6 || undefined || null)) {
-//     var starPercentage = (rating / 5) * 100;
-//     var starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-//     console.log('querySelector before', document.getElementByClassName('.stars-inner'));
-//     document.getElementByClassName(
-//       '.numStars .stars-outer .stars-inner'
-//     ).style.width = starPercentageRounded;
-//     console.log('starRating', this.state.starRating);
-//     console.log('starPercentRounded', starPercentageRounded);
-//     console.log('querySelector after', document.getElementsByClassName('.stars-inner'));
-//   }
-// }

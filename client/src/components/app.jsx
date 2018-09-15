@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import Deals from './Deals.jsx';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons';
-library.add(faStroopwafel);
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
+// library.add();
 
 class App extends React.Component {
   constructor(props) {
@@ -37,6 +37,9 @@ class App extends React.Component {
             ))}
           </span>
         </div>
+        {/* <span>
+          <FontAwesomeIcon className="chevron" icon={faChevronCircleRight} />
+        </span> */}
       </div>
     );
   }

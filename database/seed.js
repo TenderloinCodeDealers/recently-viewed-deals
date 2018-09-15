@@ -152,7 +152,7 @@ let saver = () => {
   }
 };
 
-saver();
+// saver();
 
 let getProdInfo = (id, callback) => {
   // console.log('got to controller')
