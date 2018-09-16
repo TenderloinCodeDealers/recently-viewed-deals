@@ -28,7 +28,7 @@ class Deals extends React.Component {
       if (i < rating) {
         color = '#FDC038';
       } else {
-        color = '#A5A8AB';
+        color = '#E6E7E8';
       }
       starArray[i] = (
         <FontAwesomeIcon className="star" key={`star-${i}`} icon={faStar} color={color} />
