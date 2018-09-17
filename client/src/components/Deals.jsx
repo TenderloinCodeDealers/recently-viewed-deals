@@ -1,26 +1,41 @@
 import React from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 class Deals extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // id: 0,
-      // imageUrl: '',
-      // productDealTagline: '',
-      // location: '',
-      // dealNumberBought: 0,
-      // price: 0,
-      // starRating: 0
+      id: 0,
+      imageUrl: '',
+      productDealTagline: '',
+      location: '',
+      dealNumberBought: 0,
+      origPrice: 0,
+      price: 0,
+      starRating: 6,
+      numOfReviews: 0
     };
     this.get = this.get.bind(this);
     this.get(props.deal.id);
-    // potentially add this to componentDidMount
   }
 
-  // componentDidMount() {
-  //   get(props.deal.id);
-  // }
+  stars(rating) {
+    const starArray = [];
+    let color = '';
+    for (var i = 1; i <= 5; i++) {
+      if (i < rating) {
+        color = '#FDC038';
+      } else {
+        color = '#E6E7E8';
+      }
+      starArray[i] = (
+        <FontAwesomeIcon className="star" key={`star-${i}`} icon={faStar} color={color} />
+      );
+    }
+    return starArray;
+  }
 
   get(id) {
     // console.log('THIS', this);
@@ -37,8 +52,10 @@ class Deals extends React.Component {
             productDealTagline: response.data[0].productDealTagline,
             location: response.data[0].location,
             dealNumberBought: response.data[0].dealNumberBought,
+            origPrice: response.data[0].origPrice,
             price: response.data[0].price,
-            starRating: response.data[0].starRating
+            starRating: response.data[0].starRating,
+            numOfReviews: response.data[0].numOfReviews
           });
           // console.log('newState', this.state);
         })
@@ -56,8 +73,10 @@ class Deals extends React.Component {
             serviceDealTagline: response.data[0].serviceDealTagline,
             location: response.data[0].locationTitle,
             dealNumberBought: response.data[0].dealNumberBought,
+            origPrice: response.data[0].origPrice,
             price: response.data[0].price,
-            starRating: response.data[0].starRating
+            starRating: response.data[0].starRating,
+            numOfReviews: response.data[0].numOfReviews
           });
         })
         .catch(error => {
@@ -69,14 +88,32 @@ class Deals extends React.Component {
   render() {
     return (
       <span className="deal">
-        <img className="image" src={this.state.imageUrl} />
+        <div className="imageContainer">
+          <div className="item">
+            {/* <img src={this.state.imageUrl} /> */}
+            <img src={this.state.imageUrl} />
+          </div>
+        </div>
+
         <div className="tagline">
           {this.state.productDealTagline || this.state.serviceDealTagline}
         </div>
         <div className="location"> {this.state.location} </div>
-        <div className="numBought"> {`${this.state.dealNumberBought} + bought`} </div>
-        <div className="stars"> {`${this.state.starRating} stars`} </div>
-        <div className="price"> {`$ ${this.state.price}`} </div>
+        <div className="numBought">
+          {`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}
+        </div>
+        <div className="starsContainer">
+          <div>
+            {this.stars(this.state.starRating)}
+            <span className="total-ratings-count">{`( ${this.state.numOfReviews} )`}</span>
+          </div>
+        </div>
+        <div>
+          <div className="priceContainer">
+            <span className="origPrice"> {`$${this.state.origPrice}.99 `} </span>
+            <span className="price"> {`$${this.state.price}.99 `} </span>
+          </div>
+        </div>
       </span>
     );
   }

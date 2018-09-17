@@ -14,8 +14,10 @@ let prodSchema = new mongoose.Schema({
   imageUrl: String,
   productDealTagline: String,
   dealNumberBought: Number,
+  origPrice: Number,
   price: Number,
-  starRating: Number
+  starRating: Number,
+  numOfReviews: Number
 });
 
 let servSchema = new mongoose.Schema({
@@ -37,9 +39,11 @@ let servSchema = new mongoose.Schema({
   alcohol: String,
   locationTitle: String,
   serviceDealTagline: String,
+  origPrice: Number,
   price: Number,
   dealNumberBought: Number,
-  starRating: Number
+  starRating: Number,
+  numOfReviews: Number
 });
 
 let Prod = mongoose.model('Prod', prodSchema);
@@ -47,16 +51,34 @@ let Serv = mongoose.model('Serv', servSchema);
 
 let saver = () => {
   for (var i = 0; i < 50; i++) {
+    var origPrice = faker.random.number({
+      min: 25,
+      max: 150
+    });
+    var price = faker.random.number({
+      min: 25,
+      max: origPrice
+    });
+
     var productData = {};
     productData.id = i;
     productData.imageUrl = `https://s3-us-west-1.amazonaws.com/groupon-stock-images/image-${i}.jpg`;
     productData.productDealTagline = faker.company.catchPhrase();
     productData.locationTitle = faker.address.city();
-    productData.dealNumberBought = faker.random.number();
-    productData.price = faker.commerce.price();
+    productData.dealNumberBought =
+      faker.random.number({
+        min: 1,
+        max: 300
+      }) * 10;
+    productData.origPrice = origPrice;
+    productData.price = price;
     productData.starRating = faker.random.number({
-      min: 0,
+      min: 3,
       max: 5
+    });
+    productData.numOfReviews = faker.random.number({
+      min: 5,
+      max: 200
     });
 
     var prodDoc = new Prod(productData);
@@ -71,6 +93,15 @@ let saver = () => {
   }
 
   for (var j = 50; j < 100; j++) {
+    var origPrice = faker.random.number({
+      min: 25,
+      max: 150
+    });
+    var price = faker.random.number({
+      min: 25,
+      max: origPrice
+    });
+
     var serviceData = {};
     serviceData.id = j;
     serviceData.imageUrl = `https://s3-us-west-1.amazonaws.com/groupon-stock-images/image-${j}.jpg`;
@@ -81,8 +112,8 @@ let saver = () => {
       max: 10
     });
     serviceData.dollarSignMetric = faker.random.number({
-      min: 0,
-      max: 5
+      min: 1,
+      max: 4
     });
     serviceData.hoursOfOperation = '9-5';
     serviceData.parking = faker.random.boolean();
@@ -93,11 +124,20 @@ let saver = () => {
     serviceData.alcohol = faker.random.boolean();
     serviceData.locationTitle = faker.address.city();
     serviceData.serviceDealTagline = faker.company.catchPhrase();
-    serviceData.price = faker.commerce.price();
-    serviceData.dealNumberBought = faker.random.number();
+    serviceData.origPrice = origPrice;
+    serviceData.price = price;
+    serviceData.dealNumberBought =
+      faker.random.number({
+        min: 1,
+        max: 300
+      }) * 10;
     serviceData.starRating = faker.random.number({
-      min: 0,
+      min: 3,
       max: 5
+    });
+    serviceData.numOfReviews = faker.random.number({
+      min: 5,
+      max: 200
     });
 
     var servDoc = new Serv(serviceData);
