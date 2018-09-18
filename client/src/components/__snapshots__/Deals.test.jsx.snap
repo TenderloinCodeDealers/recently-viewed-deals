@@ -1,0 +1,1879 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Deals Component renders without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Deals
+    deal={
+      Object {
+        "dealNumberBought": 60297,
+        "id": 1,
+        "imageUrl": "https://s3-us-west-1.amazonaws.com/groupon-stock-images/image-1.jpg",
+        "location": "San Francisco",
+        "price": 977,
+        "productDealTagline": "Automated coherent data-warehouse",
+        "starRating": 3,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          className="image"
+          src=""
+        />,
+        <div
+          className="tagline"
+        />,
+        <div
+          className="location"
+        >
+           
+          
+           
+        </div>,
+        <div
+          className="numBought"
+        >
+          0 + bought
+        </div>,
+        <div
+          className="starsContainer"
+        >
+          <div>
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <span
+              className="total-ratings-count"
+            >
+              ( 0 )
+            </span>
+          </div>
+        </div>,
+        <div>
+          <div
+            className="priceContainer"
+          >
+            <span
+              className="origPrice"
+            >
+               
+              $0.99 
+               
+            </span>
+            <span
+              className="price"
+            >
+               
+              $0.99 
+               
+            </span>
+          </div>
+        </div>,
+      ],
+      "className": "deal",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "image",
+          "src": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "tagline",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " ",
+            "",
+            " ",
+          ],
+          "className": "location",
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          "",
+          " ",
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "0 + bought",
+          "className": "numBought",
+        },
+        "ref": null,
+        "rendered": "0 + bought",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div>
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="star"
+              color="#FDC038"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <span
+              className="total-ratings-count"
+            >
+              ( 0 )
+            </span>
+          </div>,
+          "className": "starsContainer",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              Array [
+                undefined,
+                <FontAwesomeIcon
+                  border={false}
+                  className="star"
+                  color="#FDC038"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Object {
+                      "icon": Array [
+                        576,
+                        512,
+                        Array [],
+                        "f005",
+                        "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                      ],
+                      "iconName": "star",
+                      "prefix": "fas",
+                    }
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />,
+                <FontAwesomeIcon
+                  border={false}
+                  className="star"
+                  color="#FDC038"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Object {
+                      "icon": Array [
+                        576,
+                        512,
+                        Array [],
+                        "f005",
+                        "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                      ],
+                      "iconName": "star",
+                      "prefix": "fas",
+                    }
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />,
+                <FontAwesomeIcon
+                  border={false}
+                  className="star"
+                  color="#FDC038"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Object {
+                      "icon": Array [
+                        576,
+                        512,
+                        Array [],
+                        "f005",
+                        "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                      ],
+                      "iconName": "star",
+                      "prefix": "fas",
+                    }
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />,
+                <FontAwesomeIcon
+                  border={false}
+                  className="star"
+                  color="#FDC038"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Object {
+                      "icon": Array [
+                        576,
+                        512,
+                        Array [],
+                        "f005",
+                        "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                      ],
+                      "iconName": "star",
+                      "prefix": "fas",
+                    }
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />,
+                <FontAwesomeIcon
+                  border={false}
+                  className="star"
+                  color="#FDC038"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Object {
+                      "icon": Array [
+                        576,
+                        512,
+                        Array [],
+                        "f005",
+                        "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                      ],
+                      "iconName": "star",
+                      "prefix": "fas",
+                    }
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />,
+              ],
+              <span
+                className="total-ratings-count"
+              >
+                ( 0 )
+              </span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "star",
+                "color": "#FDC038",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                },
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "star",
+                "color": "#FDC038",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                },
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "star",
+                "color": "#FDC038",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                },
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "star",
+                "color": "#FDC038",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                },
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "star",
+                "color": "#FDC038",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": Object {
+                  "icon": Array [
+                    576,
+                    512,
+                    Array [],
+                    "f005",
+                    "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                  ],
+                  "iconName": "star",
+                  "prefix": "fas",
+                },
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "( 0 )",
+                "className": "total-ratings-count",
+              },
+              "ref": null,
+              "rendered": "( 0 )",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="priceContainer"
+          >
+            <span
+              className="origPrice"
+            >
+               
+              $0.99 
+               
+            </span>
+            <span
+              className="price"
+            >
+               
+              $0.99 
+               
+            </span>
+          </div>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="origPrice"
+              >
+                 
+                $0.99 
+                 
+              </span>,
+              <span
+                className="price"
+              >
+                 
+                $0.99 
+                 
+              </span>,
+            ],
+            "className": "priceContainer",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "$0.99 ",
+                  " ",
+                ],
+                "className": "origPrice",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "$0.99 ",
+                " ",
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  "$0.99 ",
+                  " ",
+                ],
+                "className": "price",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                "$0.99 ",
+                " ",
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "span",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            className="image"
+            src=""
+          />,
+          <div
+            className="tagline"
+          />,
+          <div
+            className="location"
+          >
+             
+            
+             
+          </div>,
+          <div
+            className="numBought"
+          >
+            0 + bought
+          </div>,
+          <div
+            className="starsContainer"
+          >
+            <div>
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <span
+                className="total-ratings-count"
+              >
+                ( 0 )
+              </span>
+            </div>
+          </div>,
+          <div>
+            <div
+              className="priceContainer"
+            >
+              <span
+                className="origPrice"
+              >
+                 
+                $0.99 
+                 
+              </span>
+              <span
+                className="price"
+              >
+                 
+                $0.99 
+                 
+              </span>
+            </div>
+          </div>,
+        ],
+        "className": "deal",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "image",
+            "src": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "tagline",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              "",
+              " ",
+            ],
+            "className": "location",
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            "",
+            " ",
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "0 + bought",
+            "className": "numBought",
+          },
+          "ref": null,
+          "rendered": "0 + bought",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div>
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <FontAwesomeIcon
+                border={false}
+                className="star"
+                color="#FDC038"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+              <span
+                className="total-ratings-count"
+              >
+                ( 0 )
+              </span>
+            </div>,
+            "className": "starsContainer",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  undefined,
+                  <FontAwesomeIcon
+                    border={false}
+                    className="star"
+                    color="#FDC038"
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Object {
+                        "icon": Array [
+                          576,
+                          512,
+                          Array [],
+                          "f005",
+                          "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                        ],
+                        "iconName": "star",
+                        "prefix": "fas",
+                      }
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />,
+                  <FontAwesomeIcon
+                    border={false}
+                    className="star"
+                    color="#FDC038"
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Object {
+                        "icon": Array [
+                          576,
+                          512,
+                          Array [],
+                          "f005",
+                          "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                        ],
+                        "iconName": "star",
+                        "prefix": "fas",
+                      }
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />,
+                  <FontAwesomeIcon
+                    border={false}
+                    className="star"
+                    color="#FDC038"
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Object {
+                        "icon": Array [
+                          576,
+                          512,
+                          Array [],
+                          "f005",
+                          "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                        ],
+                        "iconName": "star",
+                        "prefix": "fas",
+                      }
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />,
+                  <FontAwesomeIcon
+                    border={false}
+                    className="star"
+                    color="#FDC038"
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Object {
+                        "icon": Array [
+                          576,
+                          512,
+                          Array [],
+                          "f005",
+                          "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                        ],
+                        "iconName": "star",
+                        "prefix": "fas",
+                      }
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />,
+                  <FontAwesomeIcon
+                    border={false}
+                    className="star"
+                    color="#FDC038"
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Object {
+                        "icon": Array [
+                          576,
+                          512,
+                          Array [],
+                          "f005",
+                          "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                        ],
+                        "iconName": "star",
+                        "prefix": "fas",
+                      }
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />,
+                ],
+                <span
+                  className="total-ratings-count"
+                >
+                  ( 0 )
+                </span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "star",
+                  "color": "#FDC038",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  },
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "",
+                  "transform": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "star",
+                  "color": "#FDC038",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  },
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "",
+                  "transform": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "star",
+                  "color": "#FDC038",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  },
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "",
+                  "transform": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "star",
+                  "color": "#FDC038",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  },
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "",
+                  "transform": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "star",
+                  "color": "#FDC038",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": Object {
+                    "icon": Array [
+                      576,
+                      512,
+                      Array [],
+                      "f005",
+                      "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z",
+                    ],
+                    "iconName": "star",
+                    "prefix": "fas",
+                  },
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "",
+                  "transform": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "( 0 )",
+                  "className": "total-ratings-count",
+                },
+                "ref": null,
+                "rendered": "( 0 )",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="priceContainer"
+            >
+              <span
+                className="origPrice"
+              >
+                 
+                $0.99 
+                 
+              </span>
+              <span
+                className="price"
+              >
+                 
+                $0.99 
+                 
+              </span>
+            </div>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="origPrice"
+                >
+                   
+                  $0.99 
+                   
+                </span>,
+                <span
+                  className="price"
+                >
+                   
+                  $0.99 
+                   
+                </span>,
+              ],
+              "className": "priceContainer",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "$0.99 ",
+                    " ",
+                  ],
+                  "className": "origPrice",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "$0.99 ",
+                  " ",
+                ],
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "$0.99 ",
+                    " ",
+                  ],
+                  "className": "price",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "$0.99 ",
+                  " ",
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "span",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

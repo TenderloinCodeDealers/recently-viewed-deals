@@ -12,6 +12,8 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?/,
+        exclude: [/seed.js/],
+        // included seed.js into exclude becuase we do not want the seed script ran everytime we run the run webpack
         include: SRC_DIR,
         loader: 'babel-loader',
         query: {

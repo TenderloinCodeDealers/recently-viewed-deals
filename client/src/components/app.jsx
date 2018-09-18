@@ -6,43 +6,32 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 // library.add();
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      deals: [
-        { id: 0 },
-        { id: 1 },
-        { id: 2 },
-        { id: 3 },
-        { id: 50 },
-        { id: 51 },
-        { id: 52 },
-        { id: 53 },
-        { id: 54 }
-      ]
-    };
-  }
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       deals: this.props.dealsArray
+//     };
+//     console.log(this.props);
+//   }
+// ** It is not best practice to set state with props ... therefore, changed this into functional-stateless component
 
-  render() {
-    return (
-      <div>
-        <div className="title">Recently Viewed Deals</div>
-        <br />
-        <div>
-          <span className="dealContainer">
-            {/* map through each deal in this.state ...  */}
-            {this.state.deals.map(deal => (
-              <Deals deal={deal} />
-            ))}
-          </span>
-        </div>
-        {/* <span>
+const App = props => (
+  <div>
+    <div className="title">Recently Viewed Deals</div>
+    <br />
+    <div>
+      <span className="dealContainer">
+        {/* map through each deal in props.dealsArray ...  */}
+        {props.dealsArray.map(deal => (
+          <Deals deal={deal} />
+        ))}
+      </span>
+    </div>
+    {/* <span>
           <FontAwesomeIcon className="chevron" icon={faChevronCircleRight} />
         </span> */}
-      </div>
-    );
-  }
-}
+  </div>
+);
 
 export default App;

@@ -154,30 +154,5 @@ let saver = () => {
 
 // saver();
 
-let getProdInfo = (id, callback) => {
-  // console.log('got to controller')
-  Prod.find({ id: id }, (err, results) => {
-    if (err) {
-      callback(err);
-      console.log('error on MongoDB product query');
-    } else {
-      callback(null, results);
-      console.log('MongoDB product query successful');
-    }
-  });
-};
-
-let getServInfo = (id, callback) => {
-  Serv.find({ id: id }, (err, results) => {
-    if (err) {
-      callback(err);
-      console.log('error on MongoDB service query');
-    } else {
-      callback(null, results);
-      console.log('MongoDB service query successful');
-    }
-  });
-};
-
-module.exports.getProdInfo = getProdInfo;
-module.exports.getServInfo = getServInfo;
+module.exports.Prod = Prod;
+module.exports.Serv = Serv;
