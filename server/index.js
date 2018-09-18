@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
-const controllers = require('../database/seed.js');
+const controllers = require('../database/index.js');
 
-app.use(express.static(__dirname + '/../client/dist'));
+app.use('/:id/', express.static(__dirname + '/../client/dist'));
+// need to add '/:id/' to tell express to serve the static files for any url that ends in an id ...
+// without this, express will only serve the static files for localhost:3003 and wouldn't work for localhost:3003/1 ... etc,
 
 app.get('/:id/api/recently-viewed-product-data', (req, res) => {
   console.log('req.params.id', req.params.id);

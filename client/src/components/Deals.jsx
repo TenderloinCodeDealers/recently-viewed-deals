@@ -30,9 +30,7 @@ class Deals extends React.Component {
       } else {
         color = '#E6E7E8';
       }
-      starArray[i] = (
-        <FontAwesomeIcon className="star" key={`star-${i}`} icon={faStar} color={color} />
-      );
+      starArray[i] = <FontAwesomeIcon className="star" icon={faStar} color={color} />;
     }
     return starArray;
   }
@@ -42,7 +40,7 @@ class Deals extends React.Component {
     // if a product ... (products have id's 0 to 49)
     if (id < 50) {
       axios
-        .get(`${id}/api/recently-viewed-product-data`)
+        .get(`/${id}/api/recently-viewed-product-data`)
         .then(response => {
           // console.log('THIS ASYNC', this);
           // console.log(response.data[0].id);
@@ -65,7 +63,7 @@ class Deals extends React.Component {
     } else {
       // if it is a service ... (services have id's 50 to 99)
       axios
-        .get(`${id}/api/recently-viewed-service-data`)
+        .get(`/${id}/api/recently-viewed-service-data`)
         .then(response => {
           this.setState({
             id: response.data[0].id,
@@ -88,10 +86,10 @@ class Deals extends React.Component {
   render() {
     return (
       <span className="deal">
+        {/* <img className="image" src={this.state.imageUrl} /> */}
         <div className="imageContainer">
-          <div className="item">
-            {/* <img src={this.state.imageUrl} /> */}
-            <img src={this.state.imageUrl} />
+          <div>
+            <img className="item image" src={this.state.imageUrl} />
           </div>
         </div>
 
