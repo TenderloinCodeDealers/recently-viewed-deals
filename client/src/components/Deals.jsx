@@ -96,6 +96,7 @@ class Deals extends React.Component {
         <div className="tagline">
           {this.state.productDealTagline || this.state.serviceDealTagline}
         </div>
+        <br />
         <div className="location"> {this.state.location} </div>
         <div className="numBought">
           {`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}

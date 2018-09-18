@@ -21,6 +21,8 @@
   grid-template-columns: 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px;
   border: 2px black;
   grid-gap: 20px;
+  overflow-x: scroll;
+  height: 300px;
 }
 
 .deal {
@@ -99,6 +101,8 @@
 
 .numStars {
   grid-area: 'Stars';
+  font-family: 'Open Sans', OpenSans, system, -apple-system, system-ui, Roboto, Arial, FreeSans,
+    sans-serif;
   font-size: 13px;
   color: #75787b;
   font-weight: 400px;
@@ -108,11 +112,15 @@
 .priceContainer {
   grid-area: 'Price';
   text-align: right;
+  border-bottom: 1px solid #e6e7e8;
 }
 
 .origPrice {
   text-decoration: line-through;
   color: #75787b;
+  font-family: 'Open Sans', OpenSans, system, -apple-system, system-ui, Roboto, Arial, FreeSans,
+    sans-serif;
+  font-size: 13px;
 }
 
 .price {
@@ -141,4 +149,7 @@
 .total-ratings-count {
   font-size: 13px;
   color: rgb(117, 120, 123);
+  font-family: 'Open Sans', OpenSans, system, -apple-system, system-ui, Roboto, Arial, FreeSans,
+    sans-serif;
+  line-height: 13px;
 }
