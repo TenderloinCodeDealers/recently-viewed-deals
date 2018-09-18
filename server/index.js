@@ -2,6 +2,13 @@ var express = require('express');
 var app = express();
 const controllers = require('../database/index.js');
 
+// below allows cross origin requests (when team member's proxy servers are trying to connect)
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app.use('/:id/', express.static(__dirname + '/../client/dist'));
 // need to add '/:id/' to tell express to serve the static files for any url that ends in an id ...
 // without this, express will only serve the static files for localhost:3003 and wouldn't work for localhost:3003/1 ... etc,
