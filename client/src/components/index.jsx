@@ -15,4 +15,4 @@ for (let i = dealId; i < dealId + 10; i++) {
   }
 }
 
-ReactDOM.render(<App dealsArray={dealsArray} />, document.getElementById('app'));
+ReactDOM.render(<App dealsArray={dealsArray} />, document.getElementById('RVDeals'));
