@@ -1,10 +1,15 @@
+// need to keep the seed script as a blackbox. We want to make sure that it does not run accidentily (which would continously re-seed our DB)
+// therefore, (1) added '/seed.js/' to the 'exclude' list in our webpack.config.js
+// (2) removed any lookups to this file (i.e. accessing the models in this file in the database/index.js file). Instead, just copy & pasted the model code I needed into the database/index.js file directly
+
 var faker = require('faker');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/groupon-deals-db');
 
 var db = mongoose.connection;
 
-db.on('error', console.error.bind(console, 'connection error:'));
+// db.on('error', console.error.bind(console, 'connection error:'));
+db.on('error', () => console.error('connection error:'));
 
 let prodSchema = new mongoose.Schema({
   id: {
@@ -152,7 +157,4 @@ let saver = () => {
   }
 };
 
-// saver();
-
-module.exports.Prod = Prod;
-module.exports.Serv = Serv;
+saver();
