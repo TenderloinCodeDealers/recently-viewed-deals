@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// importing font style link in the head of HTML
 
 export const StyledDeal = styled.span`
   display: grid;
@@ -36,20 +37,6 @@ export const Image = styled.img`
     transform: scale(1.1);
   }
 `;
-
-// export const Item = styled.img`
-
-// `;
-
-//   .item img {
-//     -webkit-transition: 0.6s ease;
-//     transition: 0.6s ease;
-//   }
-
-//   .imageContainer:hover .item {
-//     -webkit-transform: scale(1.1);
-//     transform: scale(1.1);
-//   }
 
 export const Tagline = styled.div`
   grid-area: 'Tagline';
@@ -114,38 +101,3 @@ export const Price = styled.span`
   font-style: normal;
   font-weight: 600;
 `;
-
-// render() {
-//     return (
-//       <span className="deal">
-//         {/* <img className="image" src={this.state.imageUrl} /> */}
-//         <div className="imageContainer">
-//           <div>
-//             <img className="item image" src={this.state.imageUrl} />
-//           </div>
-//         </div>
-
-//         <div className="tagline">
-//           {this.state.productDealTagline || this.state.serviceDealTagline}
-//         </div>
-//         <br />
-//         <div className="location"> {this.state.location} </div>
-//         <div className="numBought">
-//           {`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}
-//         </div>
-//         <div className="starsContainer">
-//           <div>
-//             {this.stars(this.state.starRating)}
-//             <span className="total-ratings-count">{`( ${this.state.numOfReviews} )`}</span>
-//           </div>
-//         </div>
-//         <div>
-//           <div className="priceContainer">
-//             <span className="origPrice"> {`$${this.state.origPrice}.99 `} </span>
-//             <span className="price"> {`$${this.state.price}.99 `} </span>
-//           </div>
-//         </div>
-//       </span>
-//     );
-//   }
-// }

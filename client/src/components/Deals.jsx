@@ -48,14 +48,11 @@ class Deals extends React.Component {
   }
 
   get(id) {
-    // console.log('THIS', this);
     // if a product ... (products have id's 0 to 49)
     if (id < 50) {
       axios
         .get(`http://localhost:3003/${id}/api/recently-viewed-product-data`)
         .then(response => {
-          // console.log('THIS ASYNC', this);
-          // console.log(response.data[0].id);
           this.setState({
             id: response.data[0].id,
             imageUrl: response.data[0].imageUrl,
@@ -67,7 +64,6 @@ class Deals extends React.Component {
             starRating: response.data[0].starRating,
             numOfReviews: response.data[0].numOfReviews
           });
-          // console.log('newState', this.state);
         })
         .catch(error => {
           console.log(error);
@@ -98,7 +94,6 @@ class Deals extends React.Component {
   render() {
     return (
       <StyledDeal>
-        {/* <img className="image" src={this.state.imageUrl} /> */}
         <ImageContainer>
           <div>
             <Image src={this.state.imageUrl} />
