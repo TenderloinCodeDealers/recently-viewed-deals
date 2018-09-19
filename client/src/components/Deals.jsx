@@ -1,5 +1,17 @@
 import React from 'react';
 import axios from 'axios';
+import {
+  StyledDeal,
+  ImageContainer,
+  Image,
+  Tagline,
+  Location,
+  NumBought,
+  TotalRatingsCount,
+  PriceContainer,
+  OrigPrice,
+  Price
+} from './Deals.styles.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -85,35 +97,31 @@ class Deals extends React.Component {
 
   render() {
     return (
-      <span className="deal">
+      <StyledDeal>
         {/* <img className="image" src={this.state.imageUrl} /> */}
-        <div className="imageContainer">
+        <ImageContainer>
           <div>
-            <img className="item image" src={this.state.imageUrl} />
+            <Image src={this.state.imageUrl} />
           </div>
-        </div>
+        </ImageContainer>
 
-        <div className="tagline">
-          {this.state.productDealTagline || this.state.serviceDealTagline}
-        </div>
+        <Tagline>{this.state.productDealTagline || this.state.serviceDealTagline}</Tagline>
         <br />
-        <div className="location"> {this.state.location} </div>
-        <div className="numBought">
-          {`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}
-        </div>
-        <div className="starsContainer">
+        <Location> {this.state.location} </Location>
+        <NumBought>{`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}</NumBought>
+        <div>
           <div>
             {this.stars(this.state.starRating)}
-            <span className="total-ratings-count">{`( ${this.state.numOfReviews} )`}</span>
+            <TotalRatingsCount>{`( ${this.state.numOfReviews} )`}</TotalRatingsCount>
           </div>
         </div>
         <div>
-          <div className="priceContainer">
-            <span className="origPrice"> {`$${this.state.origPrice}.99 `} </span>
-            <span className="price"> {`$${this.state.price}.99 `} </span>
-          </div>
+          <PriceContainer>
+            <OrigPrice> {`$${this.state.origPrice}.99 `} </OrigPrice>
+            <Price> {`$${this.state.price}.99 `} </Price>
+          </PriceContainer>
         </div>
-      </span>
+      </StyledDeal>
     );
   }
 }

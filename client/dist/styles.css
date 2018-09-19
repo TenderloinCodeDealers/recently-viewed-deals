@@ -14,16 +14,15 @@
   white-space: nowrap;
 } */
 
-.dealContainer {
+/* .dealContainer {
   display: grid;
   grid-template-rows: 200px;
-  /* grid-auto-rows: minmax(100px, auto); */
   grid-template-columns: 225px 225px 225px 225px 225px 225px 225px 225px 225px 225px;
   border: 2px black;
   grid-gap: 20px;
   overflow-x: scroll;
   height: 300px;
-}
+} */
 
 .deal {
   display: grid;
@@ -40,8 +39,13 @@
 }
 
 .image {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 135px;
   width: 225px;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
 }
 
 .imageContainer {
@@ -52,21 +56,23 @@
   overflow: hidden;
 }
 
-.item {
+/* .item {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
-.item img {
+/* .image img {
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
-}
+} */
+/* This says, when you come across any className = .image WITH and img tag, then do a 0.6 sec transition on it...  */
 
-.imageContainer:hover .item {
+.image:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+/* when you hover over anything with an image classname, then scale it to 1.1  */
 
 .tagline {
   grid-area: 'Tagline';
@@ -99,7 +105,7 @@
   line-height: 13px;
 }
 
-.numStars {
+/* .numStars {
   grid-area: 'Stars';
   font-family: 'Open Sans', OpenSans, system, -apple-system, system-ui, Roboto, Arial, FreeSans,
     sans-serif;
@@ -107,7 +113,7 @@
   color: #75787b;
   font-weight: 400px;
   line-height: 13px;
-}
+} */
 
 .priceContainer {
   grid-area: 'Price';
@@ -134,7 +140,7 @@
   font-weight: 600;
 }
 
-.title {
+/* .title {
   font-weight: bold;
   color: #333333;
   font-family: 'Open Sans', OpenSans, system, -apple-system, system-ui, Roboto, Arial, FreeSans,
@@ -144,7 +150,7 @@
   font-weight: 600;
   text-align: left;
   line-height: 22px;
-}
+} */
 
 .total-ratings-count {
   font-size: 13px;
