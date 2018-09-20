@@ -1,10 +1,10 @@
 import React from 'react';
 import Deals from './Deals.jsx';
-import { Title, DealContainer } from './App.styles.jsx';
+import { MainTitle, DealContainer } from './App.styles.jsx';
 
 const App = props => (
   <div>
-    <Title>Recently Viewed Deals</Title>
+    <MainTitle>Recently Viewed Deals</MainTitle>
     <br />
     <div>
       <DealContainer>

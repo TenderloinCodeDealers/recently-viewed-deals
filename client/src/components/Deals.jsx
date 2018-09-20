@@ -30,7 +30,10 @@ class Deals extends React.Component {
       numOfReviews: 0
     };
     this.get = this.get.bind(this);
-    this.get(props.deal.id);
+  }
+
+  componentDidMount() {
+    this.get(this.props.deal.id);
   }
 
   stars(rating) {
