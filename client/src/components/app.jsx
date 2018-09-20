@@ -10,7 +10,7 @@ const App = props => (
       <DealContainer>
         {/* map through each deal in props.dealsArray ...  */}
         {props.dealsArray.map(deal => (
-          <Deals deal={deal} />
+          <Deals deal={deal} key={deal.id} />
         ))}
       </DealContainer>
     </div>
