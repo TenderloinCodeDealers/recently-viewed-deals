@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Title = styled.div`
+export const MainTitle = styled.div`
   font-weight: bold;
   color: #333333;
   font-family: 'Open Sans', OpenSans, system, -apple-system, system-ui, Roboto, Arial, FreeSans,

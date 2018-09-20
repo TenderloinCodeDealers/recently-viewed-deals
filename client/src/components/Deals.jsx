@@ -30,7 +30,10 @@ class Deals extends React.Component {
       numOfReviews: 0
     };
     this.get = this.get.bind(this);
-    this.get(props.deal.id);
+  }
+
+  componentDidMount() {
+    this.get(this.props.deal.id);
   }
 
   stars(rating) {
@@ -42,7 +45,7 @@ class Deals extends React.Component {
       } else {
         color = '#E6E7E8';
       }
-      starArray[i] = <FontAwesomeIcon className="star" icon={faStar} color={color} />;
+      starArray[i] = <FontAwesomeIcon className="star" key={i} icon={faStar} color={color} />;
     }
     return starArray;
   }
@@ -51,7 +54,8 @@ class Deals extends React.Component {
     // if a product ... (products have id's 0 to 49)
     if (id < 50) {
       axios
-        .get(`http://localhost:3003/${id}/api/recently-viewed-product-data`)
+        // .get(`http://localhost:3003/${id}/api/recently-viewed-product-data`)
+        .get(`/${id}/api/recently-viewed-product-data`)
         .then(response => {
           this.setState({
             id: response.data[0].id,
@@ -71,7 +75,8 @@ class Deals extends React.Component {
     } else {
       // if it is a service ... (services have id's 50 to 99)
       axios
-        .get(`http://localhost:3003/${id}/api/recently-viewed-service-data`)
+        // .get(`http://localhost:3003/${id}/api/recently-viewed-service-data`)
+        .get(`/${id}/api/recently-viewed-service-data`)
         .then(response => {
           this.setState({
             id: response.data[0].id,

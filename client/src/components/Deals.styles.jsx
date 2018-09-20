@@ -71,7 +71,7 @@ export const NumBought = styled.div`
 
 export const TotalRatingsCount = styled.span`
   font-size: 13px;
-  color: rgb(117, 120, 123);
+  color: #75787b;
   font-family: 'Open Sans', OpenSans, system, -apple-system, system-ui, Roboto, Arial, FreeSans,
     sans-serif;
   line-height: 13px;
@@ -92,10 +92,7 @@ export const OrigPrice = styled.span`
 `;
 
 export const Price = styled.span`
-  /* display: flex; */
-  /* align-items: right; */
-  /* justify-content: right; */
-  color: rgb(83, 163, 24);
+  color: #53a318;
   font-family: 'Open Sans', sans-serif;
   font-size: 21px;
   font-style: normal;
