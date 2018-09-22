@@ -14,7 +14,7 @@ RUN npm install
 #to bundle our app's source code inside the docker image
 COPY . .
 
-#app binds to port 3000 
+#app binds to port 8080
 EXPOSE 8080
 
 #this is defining the command to run our app 
