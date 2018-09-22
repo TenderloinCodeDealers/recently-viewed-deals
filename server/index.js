@@ -27,20 +27,6 @@ app.get('/:id/api/recently-viewed-product-data', (req, res) => {
   });
 });
 
-app.get('/:id/api/recently-viewed-service-data', (req, res) => {
-  console.log('req.params.id', req.params.id);
-  controllers.getServInfo(req.params.id, (error, results) => {
-    if (error) {
-      console.log('Error in server services request', error);
-      res.sendStatus(500);
-    } else {
-      console.log('successful service return from controllers');
-      console.log(results);
-      res.status(200).send(results);
-    }
-  });
-});
-
 let port = 8080;
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

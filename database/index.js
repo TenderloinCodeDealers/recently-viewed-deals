@@ -14,42 +14,15 @@ let prodSchema = new mongoose.Schema({
     unique: true
   },
   imageUrl: String,
-  productDealTagline: String,
+  dealTagline: String,
   dealNumberBought: Number,
   origPrice: Number,
   price: Number,
-  starRating: Number,
-  numOfReviews: Number
-});
-
-let servSchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    unique: true
-  },
-  imageUrl: String,
-  companyName: String,
-  serviceCategory: String,
-  phoneNumber: Number,
-  dollarSignMetric: String,
-  hoursOfOperation: String,
-  parking: String,
-  wifi: String,
-  goodForKids: String,
-  goodForGroups: String,
-  takesReservations: String,
-  alcohol: String,
-  locationTitle: String,
-  serviceDealTagline: String,
-  origPrice: Number,
-  price: Number,
-  dealNumberBought: Number,
   starRating: Number,
   numOfReviews: Number
 });
 
 let Prod = mongoose.model('Prod', prodSchema);
-let Serv = mongoose.model('Serv', servSchema);
 // ... end
 
 let getProdInfo = (id, callback) => {
@@ -64,17 +37,4 @@ let getProdInfo = (id, callback) => {
   });
 };
 
-let getServInfo = (id, callback) => {
-  Serv.find({ id: id }, (err, results) => {
-    if (err) {
-      callback(err, null);
-      console.log('error on MongoDB service query');
-    } else {
-      callback(null, results);
-      console.log('MongoDB service query successful');
-    }
-  });
-};
-
 module.exports.getProdInfo = getProdInfo;
-module.exports.getServInfo = getServInfo;

@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
 
-// logic below intakes URL endpoint and accurately displays the endpoint deal (by id) and 9 subsequent deals
-// Ex. localhost:3003/1 --> will display deals 1 to 10
+// logic below intakes URL endpoint, takes the last number in the url (id value), and adds it and the next 9 deals to the dealsArray. These are the 10 deals that will be shown in the module.
+// Ex. localhost:8080/1 --> will display deals 1 to 10
 var url = window.location.href;
 var dealId = Number(url.match(/([^\/]*)\/*$/)[1]);
 
