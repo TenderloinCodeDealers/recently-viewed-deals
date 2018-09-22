@@ -1,6 +1,9 @@
 const controllers = require('../database/index.js');
 var express = require('express');
+var compression = require('compression');
 var app = express();
+
+app.use(compression());
 
 // below allows cross origin requests (when team member's proxy servers are trying to connect)
 app.use(function(req, res, next) {
