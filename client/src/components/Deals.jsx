@@ -29,14 +29,14 @@ class Deals extends React.Component {
       starRating: 6,
       numOfReviews: 0
     };
-    this.get = this.get.bind(this);
+    this.getDealData = this.getDealData.bind(this);
   }
 
   componentDidMount() {
-    this.get(this.props.deal.id);
+    this.getDealData(this.props.deal.id);
   }
 
-  stars(rating) {
+  generateStars(rating) {
     const starArray = [];
     let color = '';
     for (var i = 1; i <= 5; i++) {
@@ -50,7 +50,7 @@ class Deals extends React.Component {
     return starArray;
   }
 
-  get(id) {
+  getDealData(id) {
     // if a product ... (products have id's 0 to 49)
     if (id < 50) {
       axios
@@ -111,7 +111,7 @@ class Deals extends React.Component {
         <NumBought>{`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}</NumBought>
         <div>
           <div>
-            {this.stars(this.state.starRating)}
+            {this.generateStars(this.state.starRating)}
             <TotalRatingsCount>{`( ${this.state.numOfReviews} )`}</TotalRatingsCount>
           </div>
         </div>

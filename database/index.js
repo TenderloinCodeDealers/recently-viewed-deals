@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/groupon-deals-db');
+mongoose.connect(
+  'mongodb://recently-viewed-deals-db:mlabhigs415@ds211143.mlab.com:11143/recently-viewed-deals-db'
+);
 
 var db = mongoose.connection;
 
@@ -53,7 +55,7 @@ let Serv = mongoose.model('Serv', servSchema);
 let getProdInfo = (id, callback) => {
   Prod.find({ id: id }, (err, results) => {
     if (err) {
-      callback(err);
+      callback(err, null);
       console.log('error on MongoDB product query');
     } else {
       callback(null, results);
@@ -65,7 +67,7 @@ let getProdInfo = (id, callback) => {
 let getServInfo = (id, callback) => {
   Serv.find({ id: id }, (err, results) => {
     if (err) {
-      callback(err);
+      callback(err, null);
       console.log('error on MongoDB service query');
     } else {
       callback(null, results);
