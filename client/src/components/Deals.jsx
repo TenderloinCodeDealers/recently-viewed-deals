@@ -21,7 +21,7 @@ class Deals extends React.Component {
     this.state = {
       id: 0,
       imageUrl: '',
-      productDealTagline: '',
+      dealTagline: '',
       location: '',
       dealNumberBought: 0,
       origPrice: 0,
@@ -29,14 +29,14 @@ class Deals extends React.Component {
       starRating: 6,
       numOfReviews: 0
     };
-    this.get = this.get.bind(this);
+    this.getDealData = this.getDealData.bind(this);
   }
 
   componentDidMount() {
-    this.get(this.props.deal.id);
+    this.getDealData(this.props.deal.id);
   }
 
-  stars(rating) {
+  generateStars(rating) {
     const starArray = [];
     let color = '';
     for (var i = 1; i <= 5; i++) {
@@ -50,50 +50,26 @@ class Deals extends React.Component {
     return starArray;
   }
 
-  get(id) {
-    // if a product ... (products have id's 0 to 49)
-    if (id < 50) {
-      axios
-        // .get(`http://localhost:3003/${id}/api/recently-viewed-product-data`)
-        .get(`/${id}/api/recently-viewed-product-data`)
-        .then(response => {
-          this.setState({
-            id: response.data[0].id,
-            imageUrl: response.data[0].imageUrl,
-            productDealTagline: response.data[0].productDealTagline,
-            location: response.data[0].location,
-            dealNumberBought: response.data[0].dealNumberBought,
-            origPrice: response.data[0].origPrice,
-            price: response.data[0].price,
-            starRating: response.data[0].starRating,
-            numOfReviews: response.data[0].numOfReviews
-          });
-        })
-        .catch(error => {
-          console.log(error);
+  getDealData(id) {
+    axios
+      // .get(`http://localhost:3003/${id}/api/recently-viewed-product-data`)
+      .get(`/${id}/api/recently-viewed-product-data`)
+      .then(response => {
+        this.setState({
+          id: response.data[0].id,
+          imageUrl: response.data[0].imageUrl,
+          dealTagline: response.data[0].dealTagline,
+          location: response.data[0].location,
+          dealNumberBought: response.data[0].dealNumberBought,
+          origPrice: response.data[0].origPrice,
+          price: response.data[0].price,
+          starRating: response.data[0].starRating,
+          numOfReviews: response.data[0].numOfReviews
         });
-    } else {
-      // if it is a service ... (services have id's 50 to 99)
-      axios
-        // .get(`http://localhost:3003/${id}/api/recently-viewed-service-data`)
-        .get(`/${id}/api/recently-viewed-service-data`)
-        .then(response => {
-          this.setState({
-            id: response.data[0].id,
-            imageUrl: response.data[0].imageUrl,
-            serviceDealTagline: response.data[0].serviceDealTagline,
-            location: response.data[0].locationTitle,
-            dealNumberBought: response.data[0].dealNumberBought,
-            origPrice: response.data[0].origPrice,
-            price: response.data[0].price,
-            starRating: response.data[0].starRating,
-            numOfReviews: response.data[0].numOfReviews
-          });
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   render() {
@@ -105,20 +81,20 @@ class Deals extends React.Component {
           </div>
         </ImageContainer>
 
-        <Tagline>{this.state.productDealTagline || this.state.serviceDealTagline}</Tagline>
+        <Tagline>{this.state.dealTagline}</Tagline>
         <br />
         <Location> {this.state.location} </Location>
         <NumBought>{`${this.state.dealNumberBought.toLocaleString()}` + ' + bought'}</NumBought>
         <div>
           <div>
-            {this.stars(this.state.starRating)}
+            {this.generateStars(this.state.starRating)}
             <TotalRatingsCount>{`( ${this.state.numOfReviews} )`}</TotalRatingsCount>
           </div>
         </div>
         <div>
           <PriceContainer>
-            <OrigPrice> {`$${this.state.origPrice}.99 `} </OrigPrice>
-            <Price> {`$${this.state.price}.99 `} </Price>
+            <OrigPrice> {`$${this.state.origPrice} `} </OrigPrice>
+            <Price> {`$${this.state.price} `} </Price>
           </PriceContainer>
         </div>
       </StyledDeal>

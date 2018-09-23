@@ -1,6 +1,9 @@
-var express = require('express');
-var app = express();
 const controllers = require('../database/index.js');
+var express = require('express');
+var compression = require('compression');
+var app = express();
+
+app.use(compression());
 
 // below allows cross origin requests (when team member's proxy servers are trying to connect)
 app.use(function(req, res, next) {
@@ -17,30 +20,17 @@ app.get('/:id/api/recently-viewed-product-data', (req, res) => {
   console.log('req.params.id', req.params.id);
   controllers.getProdInfo(req.params.id, (error, results) => {
     if (error) {
+      res.sendStatus(500);
       console.log('Error in server products request', error);
     } else {
       console.log('successful product return from controllers');
       console.log(results);
-      res.send(results);
+      res.status(200).send(results);
     }
   });
 });
 
-app.get('/:id/api/recently-viewed-service-data', (req, res) => {
-  console.log('req.params.id', req.params.id);
-  controllers.getServInfo(req.params.id, (error, results) => {
-    if (error) {
-      console.log('Error in server services request', error);
-    } else {
-      console.log('successful service return from controllers');
-      console.log(results);
-
-      res.send(results);
-    }
-  });
-});
-
-let port = 3003;
+let port = 8080;
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
